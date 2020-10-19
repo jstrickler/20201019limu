@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """
 This is the doc string for the module/script.
 """
@@ -16,6 +15,7 @@ def main(args):
     :param args: Command line arguments.
     :return: None
     """
+    print("Hello from main()")
     function1()
 
 # other functions
@@ -26,6 +26,8 @@ def function1():
     :return: None
     """
     pass
+
+print("MY NAME IS", __name__)
 
 if __name__ == '__main__':
     main(sys.argv[1:])  # Pass command line args (minus script name) to main()
