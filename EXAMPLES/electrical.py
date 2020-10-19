@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-default_amps = 10
+default_ohms = 10
 default_voltage = 110
 default_current = 'AC'
 
-def amps():
-    return default_amps
+def ohms():
+    return default_ohms
 
 def voltage():
     return default_voltage

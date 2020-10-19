@@ -37,3 +37,6 @@ with open('fruitlist.txt', 'x') as fruits_out:
     for fruit in fruits:
         fruits_out.write(fruit + '\n')
 
+with open("DATA/mary.txt") as mary_in:
+    pass
+
