@@ -1,4 +1,5 @@
 import sys
+from typing import Callable
 
 # def print(*args, sep=' ', end='\n'):
 #     upper_args = [str(arg).upper() for arg in args]
@@ -44,7 +45,7 @@ class Foo:
 
 f = Foo()  # create instance by "calling" class
 
-def paint(get_color_func):
+def paint(get_color_func: Callable):
     color = get_color_func()
     print("painting it", color)
 

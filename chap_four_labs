@@ -1,0 +1,11 @@
+
+Chapter 4 Lab:
+
+Add type hinting to the Chapter 3 lab.
+
+Try calling functions with the "wrong" parameters.
+
+Install mypy and try it on your code.
+
+======
+
