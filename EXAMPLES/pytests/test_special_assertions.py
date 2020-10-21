@@ -8,7 +8,7 @@ def test_missing_filename():
     with pytest.raises(FileNotFoundError):  # <1>
         open(FILE_NAME)  # <2>
 
-def test_list():
+def test_float():
     print()
     assert (.1 + .2) == pytest.approx(.3)  # <3>
 

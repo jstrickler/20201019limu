@@ -22,7 +22,7 @@ class President():
         # You will no longer need the _mkdate() method
         with open("DATA/presidents.txt") as pfile:
             for line in pfile:
-                flds = line.split(":")
+                flds = line.rstrip().split(":")
                 if int(flds[0]) == int(index):
                     self._lname = flds[1]
 

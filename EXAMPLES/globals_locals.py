@@ -16,3 +16,22 @@ def eggs(fruit):  # <3>
 
 
 eggs('mango')
+
+varname = "ham"
+
+g = globals()
+print(g[varname])
+print(g['spam'])
+
+g['provider'] = "Liberty Mutual"
+
+print(provider)
+
+g['bark'] = lambda : print("Woof! Woof!")
+
+bark()
+
+
+
+
+

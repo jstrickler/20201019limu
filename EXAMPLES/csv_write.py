@@ -12,6 +12,6 @@ with open('../TEMP/stuff.csv', 'w') as stuff_in:
     if sys.platform == 'win32':
         wtr = csv.writer(stuff_in, lineterminator='\n') # <1>
     else:
-        wtr = csv.writer(stuff_in) # <1>
+        wtr = csv.writer(stuff_in, quoting=csv.Q) # <1>
     for row in data:
         wtr.writerow(row) # <2>

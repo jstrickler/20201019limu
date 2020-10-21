@@ -8,3 +8,22 @@ def trimmed(file_name):
 
 for trimmed_line in trimmed('../DATA/mary.txt'):  # <2>
     print(trimmed_line)
+print()
+
+t = trimmed('../DATA/mary.txt')
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print()
+
+
+t = trimmed('../DATA/mary.txt')
+
+while True:
+    my_iterator = iter(t)
+    try:
+        trimmed_line = next(my_iterator)
+        print(trimmed_line)
+    except StopIteration:
+        break

@@ -5,7 +5,7 @@ from abc import ABCMeta, abstractmethod
 # Class -> instance
 
 
-class Animal(metaclass=ABCMeta):
+class Animal(metaclass=ABCMeta):  # use ABCMeta rather than type
 
     @abstractmethod
     def move(self):

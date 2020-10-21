@@ -5,6 +5,7 @@ import pytest
 def test_one():
     assert 1
 
+@pytest.mark.gamma
 @pytest.mark.alpha  # <1>
 def test_two():
     assert 1
