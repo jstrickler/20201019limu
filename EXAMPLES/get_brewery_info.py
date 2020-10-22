@@ -8,10 +8,15 @@ BREWERY = BASE_URL + '/brewery/'  # <3>
 BREWERY_IDS = ["BznahA", "nLsoQ9", "AqEUBQ"]  # <4>
 
 with requests.Session() as session:  # <5>
-    session.params.update({'key': KEY})  # <6>
+    session.params.update({'key': KEY})
+    session.verify = False  # <6>
 
     for brewery_id in BREWERY_IDS:
         response = session.get(BREWERY + brewery_id)  # <7>
+        raw_response = response.content
+        print("RAW RESPONSE:")
+        print(raw_response.decode())
+        print('-' * 60)
         resource_data = response.json()  # <8>
         brewery_data = resource_data['data']  # <9>
         brewery_name = brewery_data['name']

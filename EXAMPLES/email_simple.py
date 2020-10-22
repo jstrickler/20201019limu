@@ -13,7 +13,7 @@ MESSAGE_SUBJECT = 'Python SMTP example'
 MESSAGE_BODY = """
 Hello at {}.
 
-Testing email from Python
+Testing email from Python for Liberty Mutual
 """.format(TIMESTAMP)
 
 SMTP_USER = 'pythonclass'

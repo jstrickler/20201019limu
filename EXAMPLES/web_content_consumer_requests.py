@@ -11,28 +11,29 @@ def main(args):
         print("Please specify a search term")
         sys.exit(1)
 
-    response = requests.get(
-        BASE_URL + args[0],
-        params={'key': API_KEY},
-    )  # <3>
+    with requests.Session() as session:
+        session.params={'key': API_KEY}
 
-    if response.status_code == requests.codes.OK:
-        data = response.json()  # <4>
-        for entry in data: # <5>
-            if isinstance(entry, dict):
-                meta = entry.get("meta")
-                if meta:
-                    part_of_speech = '({})'.format(entry.get('fl'))
-                    word_id = meta.get("id")
-                    print("{} {}".format(word_id.upper(), part_of_speech))
-                if "shortdef" in entry:
-                    print('\n'.join(entry['shortdef']))
-                print()
+        for word in args:
+            response = session.get(BASE_URL + word)
+
+            if response.status_code == requests.codes.OK:
+                data = response.json()  # <4>
+                for entry in data: # <5>
+                    if isinstance(entry, dict):
+                        meta = entry.get("meta")
+                        if meta:
+                            part_of_speech = '({})'.format(entry.get('fl'))
+                            word_id = meta.get("id")
+                            print("{} {}".format(word_id.upper(), part_of_speech))
+                        if "shortdef" in entry:
+                            print('\n'.join(entry['shortdef']))
+                        print()
+                    else:
+                        print(entry)
+
             else:
-                print(entry)
-
-    else:
-        print("Sorry, HTTP response", response.status_code)
+                print("Sorry, HTTP response", response.status_code)
 
 if __name__ == '__main__':
     main(sys.argv[1:])

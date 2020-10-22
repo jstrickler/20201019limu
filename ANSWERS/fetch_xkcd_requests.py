@@ -4,11 +4,11 @@ import sys
 
 import requests
 
-url = 'http://imgs.xkcd.com/comics/python.png'
+url = 'https://imgs.xkcd.com/comics/python.png'
 saved_pdf_file = 'xkcd.png'
 
 try:
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
 except requests.HTTPError as err:
     print("Unable to open URL:", err)
     sys.exit(1)
