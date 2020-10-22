@@ -31,6 +31,6 @@ print_header("df[['alpha','epsilon','beta']]")
 print(df[['alpha', 'epsilon', 'beta']])  # <8>
 print()
 
-print_header("df[['alpha','epsilon','beta']]['b':'e']")
-print(df[['alpha', 'epsilon', 'beta']]['b':'e'])  # <9>
+print_header("df[['alpha','epsilon','beta']]['b':'b']")
+print(df[['alpha', 'epsilon', 'beta']]['b':'b'])  # <9>
 print()

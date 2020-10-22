@@ -12,7 +12,10 @@ s2 = pd.Series(np.linspace(1, 5, NUM_VALUES))  # <3>
 print("s1:", s1, "\n")
 print("s2:", s2, "\n")
 
+
+
 print("selecting elements")
+print(s1['c'])
 print(s1[['h', 'b']], "\n")  # <4>
 
 print(s1[['a', 'b', 'c']], "\n")  # <4>
@@ -22,6 +25,7 @@ print(s1['b':'d'], "\n")  # <5>
 
 print("sum(), mean(), min(), max():")
 print(s1.sum(), s1.mean(), s1.min(), s1.max(), "\n")  # <6>
+print(s1[['a', 'h', 'c']].mean())
 
 print("cumsum(), cumprod():")
 print(s1.cumsum(), s1.cumprod(), "\n")  # <6>
