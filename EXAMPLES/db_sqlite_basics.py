@@ -8,11 +8,12 @@ with sqlite3.connect("../DATA/presidents.db") as s3conn:  # <1>
 
     # select first name, last name from all presidents
     s3cursor.execute('''
-        select firstname, lastname
+        select firstname, lastname, party
         from presidents
     ''')  # <3>
 
     print("Sqlite3 does not provide a row count\n")  # <4>
 
     for row in s3cursor.fetchall():  # <5>
-        print(' '.join(row))  # <6>
+        print(row)
+        # print(' '.join(row))  # <6>

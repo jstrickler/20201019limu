@@ -12,6 +12,7 @@ def row_as_dict(cursor):
     column_names = [desc[0] for desc in cursor.description]
     for cursor_row in cursor.fetchall():
         row_dict = dict(zip(column_names, cursor_row))
+        # OR namedtuple or dataclass
         yield row_dict
 
 

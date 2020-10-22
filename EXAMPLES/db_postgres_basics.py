@@ -16,8 +16,16 @@ pg_cursor.execute('''
 
 print("{} rows in result set\n".format(pg_cursor.rowcount))
 
+# while True:
+#     row = pg_cursor.fetchone()
+#     if row:
+#         print(' '.join(row))
+#     else:
+#         break
 for row in pg_cursor.fetchall():
-    print(' '.join(row))
+    print(row)
+
+
 print()
 
 pg_conn.close()

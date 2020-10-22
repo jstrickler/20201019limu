@@ -8,7 +8,7 @@ with closing(
         host="localhost",
         db="presidents",
         user="scripts",
-        passwd="scripts",
+        passwd="scripts",  # IRL get from config file or the environment
     )
 ) as myconn:
     mycursor = myconn.cursor()
