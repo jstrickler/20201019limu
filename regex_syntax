@@ -1,0 +1,34 @@
+
+ pat
+
+ p.t  p[aeiou]t p[^aeiou]t
+
+ p\dt p\st p\wt
+
+ \d\d\d-\d\d-\d\d\d\d
+
+ \d{3}-\d{2}-\d{4}
+
+ *   0 or more
+ +   1 or more
+ ?   0 or 1
+ {n} exactly n
+ {n,m} n through m
+ {n,} at least n
+
+ pa*t
+ pa+t
+
+ ^foo
+
+ bar$
+
+
+ \bfoo
+
+ bar\b
+
+
+
+
+

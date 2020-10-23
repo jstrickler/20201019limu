@@ -11,12 +11,12 @@ with open('../DATA/words.txt') as words_in:
 random.shuffle(WORDS) # <4>
 
 def my_task(word):  # <5>
-    return word.upper()
+    return word.upper()[:4]
 
 tpool = Pool(POOL_SIZE) # <6>
 
 WORD_LIST = tpool.map(my_task, WORDS) # <7>
 
-print(WORD_LIST[:20])  # <8>
+print(WORD_LIST[:40])  # <8>
 
 print("Processed {} words.".format(len(WORD_LIST)))
