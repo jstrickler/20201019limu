@@ -21,7 +21,7 @@ selected = airports_df[selector][columns_wanted]
 print(selected)
 
 print_header("COLUMN TOTALS")
-print(airports_df[['2001 Total', '2010 Total']].sum(), "\n")
+print(airports_df[['2001 Total', '2010 Total']].sum`(), "\n")
 
 # print_header("'CODE' COLUMN SET AS INDEX")
 # airports_df.set_index('Code')
