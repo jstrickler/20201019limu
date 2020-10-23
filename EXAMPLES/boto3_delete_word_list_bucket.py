@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import boto3
-from boto3_common import BUCKET_NAME
+    from boto3_common import BUCKET_NAME
 
 
 def main():

@@ -42,6 +42,7 @@ def make_bucket_name(prefix):
     """
     unique_id = uuid.uuid4()
     bucket_name = "{}-{}".format(prefix, unique_id)
+    print(bucket_name)
     return bucket_name
 
 if __name__ == '__main__':

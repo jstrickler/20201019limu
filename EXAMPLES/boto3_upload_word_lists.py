@@ -11,7 +11,7 @@ def main():
     word_lists = {}  # <.>
     with open('../DATA/words.txt') as words_in:  # <.>
         for raw_line in words_in:
-            word = raw_li   ne.rstrip()
+            word = raw_line.rstrip()
             first_letter = word[0]
             if first_letter not in word_lists:
                 word_lists[first_letter] = []
