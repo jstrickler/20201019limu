@@ -14,6 +14,8 @@ pattern = r'[A-Z]-\d{2,3}'  # <1>
 
 if re.search(pattern, s):  # <2>
     print("Found pattern.")
+else:
+    print("Did not find pattern")
 print()
 
 m = re.search(pattern, s)  # <3>
